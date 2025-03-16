@@ -1,4 +1,5 @@
 package com.workintech.s18d4;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
@@ -17,7 +18,7 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
+public class ResultAnalyzer implements TestWatcher, AfterAllCallback {
     private List<TestResultStatus> testResultsStatus = new ArrayList<>();
     private static final String taskId = "170";
 
@@ -55,7 +56,7 @@ public class ResultAnalyzer implements TestWatcher, AfterAllCallback{
         long failure = summary.get(TestResultStatus.FAILED) != null ? summary.get(TestResultStatus.FAILED) : 0;
 
         double score = (double) success / (success + failure);
-        String userId = "999999";
+        String userId = "194779";
 
         JSONObject json = new JSONObject();
         json.put("score", score);
